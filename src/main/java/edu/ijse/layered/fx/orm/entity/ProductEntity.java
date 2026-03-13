@@ -1,0 +1,17 @@
+package edu.ijse.layered.fx.orm.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class ProductEntity {
+
+    private int id;
+    private String name;
+    private int qyt;
+    private Double price;
+
+}
