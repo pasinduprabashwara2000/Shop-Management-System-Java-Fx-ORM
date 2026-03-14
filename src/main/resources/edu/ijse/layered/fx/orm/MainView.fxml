@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700" prefWidth="1100" styleClass="app-root" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.mvc.fx.sms.controller.MainController">
+
+    <!-- Sidebar Navigation -->
+    <left>
+        <VBox fx:id="menuVBox" spacing="0" styleClass="sidebar">
+
+            <!-- Brand -->
+            <VBox styleClass="sidebar-brand-box">
+                <Label styleClass="sidebar-brand-title" text="SMS" />
+                <Label styleClass="sidebar-brand-subtitle" text="Management System" />
+            </VBox>
+
+            <!-- Nav Buttons -->
+            <Button fx:id="customersBtn" alignment="CENTER" contentDisplay="CENTER" maxWidth="Infinity" prefHeight="46.0" prefWidth="134.0" styleClass="nav-button" text="Customers" textAlignment="CENTER" />
+            <Button fx:id="productsBtn" alignment="CENTER" contentDisplay="CENTER" maxWidth="Infinity" prefHeight="46.0" prefWidth="134.0" styleClass="nav-button" text="Products" textAlignment="CENTER" />
+         <Button fx:id="suppliersBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="92.0" maxWidth="Infinity" prefHeight="46.0" prefWidth="134.0" styleClass="nav-button" text="Suppliers" textAlignment="CENTER" />
+            <Button fx:id="ordersBtn" alignment="CENTER" contentDisplay="CENTER" maxWidth="Infinity" prefHeight="46.0" prefWidth="134.0" styleClass="nav-button" text="Orders" textAlignment="CENTER" />
+
+            <!-- Spacer -->
+            <Pane VBox.vgrow="ALWAYS" />
+
+            <!-- Logout -->
+            <Button fx:id="logoutBtn" alignment="CENTER" contentDisplay="CENTER" maxWidth="Infinity" onAction="#navigateLogout" style="-fx-text-fill: #ff6b6b;" styleClass="nav-button" text="Logout" textAlignment="CENTER" />
+
+            <Label styleClass="sidebar-version" text="v1.0.0" />
+        </VBox>
+    </left>
+
+    <!-- Content Area -->
+    <center>
+        <VBox spacing="0">
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="top-bar">
+                <Label fx:id="lblPageTitle" styleClass="page-title" text="Dashboard" />
+            </HBox>
+            <AnchorPane fx:id="contentPane" VBox.vgrow="ALWAYS" />
+        </VBox>
+    </center>
+
+</BorderPane>
